@@ -1,0 +1,162 @@
+<html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+*{ font-family: 'Roboto', sans-serif;
+
+
+    }
+    .twitter-typeahead{ width:100%; }
+.col-md-12 {
+    border: 1px solid gray;
+    margin:5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+        </style>
+    </head><body>
+        <div class="navbar navbar-default navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span>SPRINGBOARD LearningHub- One stop hub for all the learning paths</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section section-primary" style="background-color: #f7f7f7 !important">
+            <div class="container">
+                <div class="row text-center">
+                    <div class=" col-md-6">
+                        <form role="form">
+                            <div class="form-group has-success">
+                                <div class="input-group input-group-block" id="the-basics">
+                                    <input id="search_bar" type="text" class="form-control typeahead" placeholder="Search (By Tag)">
+                                    <span class="input-group-btn">
+                                        <a id="search_button" class="btn btn-success" type="submit">Go</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter results</a>
+                    </div>
+                </div>
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="color:teal" >Filter Results By</h4>
+        </div>
+            <div class="modal-body" style="color:teal">
+ <table class="table ">
+ 
+  <tbody>
+      <tr>
+        <td> <input type="radio" id="sort1" > Learners(Low to High) 
+            </td>
+        <td> <input type="radio" id="sort2" > Learners(High to Low) 
+            </td>
+        <td> <input type="radio" id="sort3" > Hours( Low to High) 
+            </td>
+        <td> <input type="radio" id="sort4" > Hours(High to Low) 
+            
+      </tr>
+    </tbody>
+</table>
+</div>
+
+              <div class="modal-footer">
+                    <button id='radio_button' type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+              </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+            </div>
+        </div>
+        <!-- <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb text-left">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Learning Paths</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div> -->
+                <div class="section"> <div class="container">
+                    <div id="result_area"></div> 
+                </div></div>
+        <footer class="section section-success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1 class="text-center text-primary">SpringBoard&nbsp;</h1>
+                        <p class="text-center">One stop hub for all the learning paths</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-info text-right">
+                            <br>
+                            <br>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 hidden-xs text-center">
+                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-primary"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-primary"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-facebook fa-fw text-primary"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+<script type="text/javascript" src='spring.js'></script>
+</body></html>
